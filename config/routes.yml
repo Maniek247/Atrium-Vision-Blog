@@ -1,8 +1,8 @@
-modernmodule_configuration:
-  path: /modernmodule/configure
-  methods: [GET]
+atriumvisionblog_configuration:
+  path: /atriumvisionblog/configure
+  methods: [GET, POST]
   defaults:
-    _controller: 'PrestaShop\Module\ModernModule\Controller\Admin\ConfigurationController::indexAction'
-    # Link BO permissions to our route
-    _legacy_controller: 'AdminModernmoduleConfiguration'
-    _legacy_link: 'AdminModernmoduleConfiguration'
+    _controller: 'PrestaShop\Module\AtriumVisionBlog\Controller\AdminBlogConfigurationController::indexAction'
+    # Needed to work with tab system
+    _legacy_controller: 'AdminBlogConfiguration'
+    _legacy_link: 'AdminBlogConfiguration'
