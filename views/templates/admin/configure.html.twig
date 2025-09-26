@@ -1,0 +1,16 @@
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+
+{% block content %}
+  <div class="card">
+    <h1 class="card-header">{{ 'Modern module skeleton'|trans({}, 'Modules.Modernmodule.Admin') }}</h1>
+    <div class="card-body">
+      <p>{{ 'You are ready to build a Symfony-first module for PrestaShop 8/9.'|trans({}, 'Modules.Modernmodule.Admin') }}</p>
+      <ul>
+        <li>Routing: <code>modules/modernmodule/config/routes.yml</code></li>
+        <li>Controller: <code>modules/modernmodule/src/Controller/Admin/ConfigurationController.php</code></li>
+        <li>Services: <code>modules/modernmodule/config/services.yml</code></li>
+        <li>Unit tests: <code>modules/modernmodule/tests</code></li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

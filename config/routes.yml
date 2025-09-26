@@ -1,0 +1,8 @@
+modernmodule_configuration:
+  path: /modernmodule/configure
+  methods: [GET]
+  defaults:
+    _controller: 'PrestaShop\Module\ModernModule\Controller\Admin\ConfigurationController::indexAction'
+    # Link BO permissions to our route
+    _legacy_controller: 'AdminModernmoduleConfiguration'
+    _legacy_link: 'AdminModernmoduleConfiguration'

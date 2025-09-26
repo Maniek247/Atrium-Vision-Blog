@@ -1,0 +1,21 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: false
+    public: false
+
+  PrestaShop\Module\ModernModule\:
+    resource: '../src/*'
+    exclude: '../src/{Controller,Resources,Entity,Kernel.php}'
+
+  # Expose controller as a public service to Symfony
+  PrestaShop\Module\ModernModule\Controller\:
+    resource: '../src/Controller/*'
+    public: true
+    autowire: true
+    tags: [ 'controller.service_arguments' ]
+
+  # Example: register a Symfony console command (available via bin/console)
+  PrestaShop\Module\ModernModule\Command\:
+    resource: '../src/Command/*'
+    tags: [ 'console.command' ]
